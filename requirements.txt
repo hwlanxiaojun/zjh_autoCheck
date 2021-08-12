@@ -1,0 +1,3 @@
+requests==2.23.0
+baidu_aip==2.2.18.0
+Pillow==8.3.1
