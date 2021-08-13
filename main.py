@@ -165,6 +165,8 @@ def get_score(session):
     if "万物互联01" in response.text:
         logging.info(str_time("%H%M") + user_id + "任务一完成")
 
+    delay_time = random.randint(0,3)
+    time.sleep(delay_time)
     while (True):
         try:
             ret_code = ""
@@ -180,11 +182,15 @@ def get_score(session):
         except:
             continue
 
+    delay_time = random.randint(0, 3)
+    time.sleep(delay_time)
     score_third_url = "http://jdx.zjer.cn/index.php?r=studio/courselive/Livelist&sid=600061&tid=9525&aid=4043&xs_id=1&on_sale=1"
     response = session.get(url=score_third_url, timeout=5)
     if "温州市第二外国语学校高中地理基地校" in response.text:
         logging.info(str_time("%H%M") + user_id + "任务三完成")
 
+    delay_time = random.randint(0, 3)
+    time.sleep(delay_time)
     score_four_url_1 = "http://ms.zjer.cn/index.php?r=studio/live/livebackdetail&sid=824&id=3159&live_type=1"
     score_four_url_2 = "http://ms.zjer.cn/index.php?r=studio/live/livebackdetail&sid=603&id=2617&live_type=3"
     response1 = session.get(url=score_four_url_1, timeout=5)
